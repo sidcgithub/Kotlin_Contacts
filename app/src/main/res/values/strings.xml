@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Kotlin Contacts</string>
+    <string name="edit">Edit</string>
+</resources>

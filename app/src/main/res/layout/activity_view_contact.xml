@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="displayContact"
+            type="com.siddharthchordia.www.kotlincontacts.model.Contact" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/blue_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".ViewContactActivity"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+
+
+        >
+
+        <TextView
+            android:id="@+id/displayContactName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{displayContact.name}"
+            android:textColor="#FFFFFF"
+            android:textSize="40sp"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="40dp"/>
+        <ImageView
+            android:id="@+id/displayProfileImage"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            app:srcCompat="@mipmap/ic_launcher_round"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/displayContactPhone"
+            android:text="@{displayContact.phone}"
+            android:layout_marginTop="40dp"
+            android:textSize="24sp"
+            android:textColor="#F8E694"
+            />
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:id="@+id/displayContactEmail"
+            android:text="@{displayContact.email}"/>
+        <Button
+            android:id="@+id/editDisplayContact"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:text="@string/edit"/>
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</layout>
